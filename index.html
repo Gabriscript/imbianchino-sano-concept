@@ -32,7 +32,6 @@
   --on-dark:#F4F9F5;
   --on-dark-2:#C5D9CD;
   --pop:#4FD488;
-  --amber:#F59E0B;
   --danger:#D93829;
   --scrim:linear-gradient(to top,rgb(12 51 31 / .96) 0,rgb(12 51 31 / .88) calc(100% - 80px),rgb(12 51 31 / 0) 100%);
   --shadow:0 20px 44px -16px rgb(12 51 31 / .38);
@@ -56,7 +55,6 @@ body{
   font:500 1rem/1.62 var(--font);
   padding-bottom:calc(82px + env(safe-area-inset-bottom,0px));
 }
-body.hide-verify .chip-verify{display:none !important}
 img{display:block;max-width:100%;height:auto}
 h1,h2,h3,p,blockquote,figure,ul{margin:0}
 ul{padding:0;list-style:none}
@@ -78,61 +76,6 @@ a{color:var(--green-deep)}
 .wrap{max-width:calc(1220px + 2*var(--gutter));margin-inline:auto;padding-inline:var(--gutter)}
 .sec{padding-block:var(--sec);position:relative}
 .ico{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-
-/* Barra interattiva di controllo Mockup (in alto) */
-.mockup-bar{
-  background:var(--forest);
-  color:var(--on-dark);
-  font-size:.8125rem;
-  padding:8px var(--gutter);
-  border-bottom:2px solid var(--forest-2);
-  position:relative;
-  z-index:50;
-}
-.mockup-bar-inner{
-  max-width:1220px;
-  margin-inline:auto;
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:space-between;
-  gap:8px 16px;
-}
-.mockup-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  font-weight:800;
-  letter-spacing:.03em;
-  text-transform:uppercase;
-  color:var(--pop);
-}
-.mockup-badge span{
-  width:9px;height:9px;border-radius:50%;background:var(--pop);
-  box-shadow:0 0 0 4px rgb(79 212 136 / .25);
-}
-.mockup-tools{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:8px;
-}
-.tool-btn{
-  appearance:none;
-  border:1.5px solid rgb(255 255 255 / .24);
-  background:rgb(255 255 255 / .08);
-  color:var(--on-dark);
-  font:700 .75rem/1.2 var(--font);
-  padding:6px 12px;
-  border-radius:999px;
-  cursor:pointer;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  transition:all .18s var(--ease);
-}
-.tool-btn:hover{background:var(--pop);color:var(--forest);border-color:var(--pop)}
-.tool-btn[aria-pressed="true"]{background:var(--pop);color:var(--forest);border-color:var(--pop)}
 
 /* Pulsanti stile Scott The Painter (chunky pill + tactile shadow) */
 .btn{
@@ -186,25 +129,6 @@ a{color:var(--green-deep)}
   color:var(--forest);
 }
 .btn.light:hover{background:var(--tint)}
-
-.chip{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  padding:4px 12px;
-  border:1.5px dashed var(--line);
-  border-radius:999px;
-  background:var(--paper);
-  color:var(--slate);
-  font-size:.78rem;
-  font-weight:700;
-  line-height:1.4;
-}
-.chip::before{
-  content:"";
-  width:7px;height:7px;border-radius:50%;
-  background:var(--amber);
-}
 
 /* Sottolineatura a pennellata/rullo (Scott The Painter signature) */
 .paint-mark{
@@ -443,70 +367,6 @@ h1 em::after{
   overflow:hidden;
   background:linear-gradient(180deg, var(--paper) 0%, var(--tint) 78%, var(--tint-2) 100%);
 }
-.van-stage-header{
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:space-between;
-  gap:14px;
-  margin-bottom:12px;
-  position:relative;
-  z-index:5;
-}
-.van-route-pill{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:var(--paper);
-  border:2.5px solid var(--forest);
-  box-shadow:0 4px 0 var(--forest);
-  border-radius:999px;
-  padding:8px 18px;
-  font-weight:800;
-  font-size:.85rem;
-  color:var(--forest);
-  text-transform:uppercase;
-}
-.van-route-dot{
-  width:10px;height:10px;border-radius:50%;
-  background:var(--green);
-  box-shadow:0 0 0 4px var(--tint-2);
-  animation:pulseDot 1.6s infinite;
-}
-@keyframes pulseDot{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.25)}
-}
-.van-controls{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-.van-ctrl-btn{
-  appearance:none;
-  background:var(--paper);
-  color:var(--forest);
-  border:2px solid var(--forest);
-  box-shadow:0 4px 0 var(--forest);
-  border-radius:999px;
-  padding:8px 16px;
-  font:800 .8rem/1.1 var(--font);
-  text-transform:uppercase;
-  cursor:pointer;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  transition:transform .15s var(--ease), background-color .15s var(--ease);
-}
-.van-ctrl-btn:hover{
-  background:var(--pop);
-  transform:translateY(-2px);
-}
-.van-ctrl-btn:active{
-  transform:translateY(1px);
-  box-shadow:0 1px 0 var(--forest);
-}
-
 /* Scena stradale + colline venete */
 .road-viewport{
   position:relative;
@@ -599,38 +459,10 @@ h1 em::after{
   100%{transform:translate(-48px,-22px) scale(1.35);opacity:0}
 }
 
-/* Clacson / Fumetto "BEEP BEEP!" */
-.horn-bubble{
-  position:absolute;
-  top:-14px;
-  right:8%;
-  background:var(--pop);
-  color:var(--forest);
-  border:3px solid var(--forest);
-  box-shadow:0 5px 0 var(--forest);
-  padding:8px 16px;
-  border-radius:999px;
-  font:900 .85rem/1.1 var(--font);
-  text-transform:uppercase;
-  letter-spacing:.02em;
-  opacity:0;
-  transform:translateY(12px) scale(.85) rotate(4deg);
-  transition:all .22s var(--ease);
-  pointer-events:none;
-  z-index:10;
-}
-.horn-bubble.active{
-  opacity:1;
-  transform:translateY(0) scale(1) rotate(-3deg);
-}
-
 /* Fascio fari */
 .headlight-beam{
   opacity:0;
   transition:opacity .25s ease;
-}
-.lights-on .headlight-beam{
-  opacity:.85;
 }
 
 /* Girofaro sul tetto */
@@ -787,7 +619,7 @@ h1 em::after{
 .claims .blob-ico::before{background:var(--tint-2);inset:4px 0 0 6px}
 .claims .blob-ico .ico{width:34px;height:34px}
 .claims h3{font-size:1.1rem;text-transform:uppercase;letter-spacing:-.01em}
-.claims .chip{margin-top:6px}
+.claims p{margin-top:6px;font-size:.95rem}
 .prod .btn{margin-top:40px}
 
 /* Banda verde: quello che gli imbianchini non dicono */
@@ -834,7 +666,6 @@ h1 em::after{
   letter-spacing:-.02em;
   color:var(--forest);
 }
-.voc .chip{margin-top:16px}
 .band .btn{margin-top:32px}
 
 /* Ventilazione */
@@ -867,7 +698,6 @@ h1 em::after{
   color:var(--green-deep);
 }
 .vent p{margin-top:24px}
-.vent .chip{margin-top:16px}
 .vent .btn{margin-top:32px}
 
 /* Recensioni */
@@ -1260,10 +1090,6 @@ h1 em::after{
       <!-- Riflesso diagonale sul vetro cabina -->
       <polygon points="532,92 554,92 526,162 514,162" fill="#FFFFFF" opacity="0.16"/>
       <polygon points="562,92 572,92 544,162 534,162" fill="#FFFFFF" opacity="0.1"/>
-
-      <!-- Volante e sagoma conducente (Imri!) dentro la cabina -->
-      <circle cx="584" cy="124" r="14" fill="#4FD488" stroke="#0C331F" stroke-width="2.5"/>
-      <path d="M 566 162 C 568 144 598 144 602 162 Z" fill="#009B43" stroke="#0C331F" stroke-width="2.5"/>
       <line x1="628" y1="142" x2="612" y2="162" stroke="#0C331F" stroke-width="4" stroke-linecap="round"/>
 
       <!-- Specchietto retrovisore esterno nero -->
@@ -1349,21 +1175,6 @@ h1 em::after{
 
 <a class="skip" href="#main">Vai al contenuto</a>
 
-<!-- Barra anteprima mockup: mostra/nasconde i chip da verificare -->
-<aside class="mockup-bar" aria-label="Controlli anteprima mockup">
-  <div class="mockup-bar-inner">
-    <div class="mockup-badge">
-      <span></span>
-      Anteprima mockup
-    </div>
-    <div class="mockup-tools">
-      <button type="button" class="tool-btn" id="toggleVerifyBtn" aria-pressed="true">
-        Chip [da verificare con Imri]: <strong>VISIBILI</strong>
-      </button>
-    </div>
-  </div>
-</aside>
-
 <header class="head">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="Imbianchino Sano - Torna all'inizio">
@@ -1425,24 +1236,6 @@ h1 em::after{
        ======================================================================== -->
   <section class="van-stage" id="vanStage" aria-label="Il furgoncino di Imbianchino Sano in viaggio">
     <div class="wrap">
-      <div class="van-stage-header">
-        <div class="van-route-pill">
-          <span class="van-route-dot" aria-hidden="true"></span>
-          Mira (VE)
-        </div>
-        <div class="van-controls">
-          <button type="button" class="van-ctrl-btn" id="btnHorn">
-            🔊 Suona il clacson
-          </button>
-          <button type="button" class="van-ctrl-btn" id="btnLights">
-            💡 Accendi i fari
-          </button>
-          <button type="button" class="van-ctrl-btn" id="btnDriveToggle">
-            ⏸ Ferma / Fai viaggiare
-          </button>
-        </div>
-      </div>
-
       <div class="road-viewport">
         <!-- Sfondo colline morbide e alberi stilizzati -->
         <svg class="road-scenery" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true">
@@ -1455,8 +1248,7 @@ h1 em::after{
         <div class="road-dashes" aria-hidden="true"></div>
 
         <!-- Il Furgoncino SVG -->
-        <div class="van-actor" id="vanActor" role="button" tabindex="0" aria-label="Furgoncino di Imbianchino Sano: clicca per suonare il clacson">
-          <div class="horn-bubble" id="hornBubble">BEEP BEEP!</div>
+        <div class="van-actor" id="vanActor" role="img" aria-label="Furgoncino di Imbianchino Sano">
           <svg viewBox="0 0 820 360" width="100%" height="100%" aria-hidden="true">
             <use href="#van-imbianchino-sano"/>
           </svg>
@@ -1528,21 +1320,21 @@ h1 em::after{
             <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg></span>
             <div>
               <h3>elimina totalmente la muffa</h3>
-              <span class="chip chip-verify">[da verificare con Imri]</span>
+              <p>Grazie ai suoi principi attivi naturali, l’Elisir 3 in 1 elimina completamente la muffa. Non solo rimuove quella esistente, ma previene anche la sua ricomparsa.</p>
             </div>
           </li>
           <li>
             <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg></span>
             <div>
               <h3>Isola termicamente le pareti di casa</h3>
-              <span class="chip chip-verify">[da verificare con Imri]</span>
+              <p>Contribuisce all’isolamento termico delle pareti, riducendo le dispersioni di calore fino a 3°: comfort e risparmio energetico.</p>
             </div>
           </li>
           <li>
             <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-wind"/></svg></span>
             <div>
               <h3>Uccide le particelle di gas V.O.C. presenti nell’aria</h3>
-              <span class="chip chip-verify">[da verificare con Imri]</span>
+              <p>È formulato per non emettere sostanze dannose nell’aria che respiri, ed è un alleato contro le particelle di gas V.O.C. presenti in casa.</p>
             </div>
           </li>
         </ul>
@@ -1563,7 +1355,6 @@ h1 em::after{
       <div>
         <div class="voc">
           <q>Prima di pitturare casa, qualche imbianchino ti ha mai parlato del GAS V.O.C.?</q>
-          <span class="chip chip-verify">[da verificare con Imri]</span>
         </div>
         <a class="btn light" href="https://imbianchinosano.it/info-utili/">Scopri il perché</a>
       </div>
@@ -1577,7 +1368,6 @@ h1 em::after{
       <div>
         <h2>Aria fresca e pulita in casa: <span>Scopri la nostra soluzione integrata</span></h2>
         <p>Oltre alla vernice, è fondamentale garantire un’adeguata ventilazione meccanica per un ambiente salubre e confortevole. Scopri come la combinazione di una pittura di qualità e un sistema di ventilazione avanzato può trasformare la tua casa in uno spazio dove l’aria fresca e i colori brillanti si incontrano.</p>
-        <span class="chip chip-verify">[da verificare con Imri]</span><br>
         <a class="btn" href="https://imbianchinosano.it/sistema-di-ventilazione/">Esplora la ventilazione meccanica</a>
       </div>
       <div class="vent-art">
@@ -1716,59 +1506,6 @@ h1 em::after{
       link.addEventListener('click', function() {
         mobileMenu.removeAttribute('open');
       });
-    });
-  }
-
-  // 2. Toggle visibilità chip [da verificare con Imri] per presentare il sito pulito al cliente
-  var toggleVerifyBtn = document.getElementById('toggleVerifyBtn');
-  if (toggleVerifyBtn) {
-    toggleVerifyBtn.addEventListener('click', function() {
-      var hidden = document.body.classList.toggle('hide-verify');
-      toggleVerifyBtn.setAttribute('aria-pressed', String(!hidden));
-      toggleVerifyBtn.innerHTML = 'Chip [da verificare con Imri]: <strong>' + (hidden ? 'NASCOSTI' : 'VISIBILI') + '</strong>';
-    });
-  }
-
-  // 3. Interazioni del Furgoncino (Clacson, Fari, Marcia/Pausa)
-  var vanStage = document.getElementById('vanStage');
-  var vanActor = document.getElementById('vanActor');
-  var hornBubble = document.getElementById('hornBubble');
-  var btnHorn = document.getElementById('btnHorn');
-  var btnLights = document.getElementById('btnLights');
-  var btnDriveToggle = document.getElementById('btnDriveToggle');
-  var hornTimer = null;
-
-  function triggerHorn() {
-    if (!hornBubble) return;
-    hornBubble.classList.add('active');
-    clearTimeout(hornTimer);
-    hornTimer = setTimeout(function() {
-      hornBubble.classList.remove('active');
-    }, 2200);
-  }
-
-  if (btnHorn) btnHorn.addEventListener('click', triggerHorn);
-  if (vanActor) {
-    vanActor.addEventListener('click', triggerHorn);
-    vanActor.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        triggerHorn();
-      }
-    });
-  }
-
-  if (btnLights && vanStage) {
-    btnLights.addEventListener('click', function() {
-      var on = vanStage.classList.toggle('lights-on');
-      btnLights.textContent = on ? '💡 Spegni i fari' : '💡 Accendi i fari';
-    });
-  }
-
-  if (btnDriveToggle && vanStage) {
-    btnDriveToggle.addEventListener('click', function() {
-      var paused = vanStage.classList.toggle('paused');
-      btnDriveToggle.textContent = paused ? '▶️ Fai viaggiare' : '⏸ Ferma il furgoncino';
     });
   }
 
