@@ -1,0 +1,1778 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Imbianchino Sano | La salute prima di tutto</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Chiamare l’Imbianchino Sano, significa eliminare e risolvere veramente i tuoi problemi, con un singolo intervento.">
+<link rel="preload" href="assets/fonts/montserrat-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{
+  font-family:"Montserrat";
+  src:url("assets/fonts/montserrat-latin-var.woff2") format("woff2");
+  font-weight:100 900;
+  font-style:normal;
+  font-display:swap;
+}
+:root{
+  --paper:#FBFCFA;
+  --tint:#EAF5EE;
+  --tint-2:#CFEBD9;
+  --tint-3:#B5E2C5;
+  --ink:#232830;
+  --slate:#434955;
+  --line:#7A828E;
+  --green:#009B43;
+  --green-deep:#00793A;
+  --green-press:#005E2C;
+  --green-band:#00863F;
+  --forest:#0C331F;
+  --forest-2:#15472D;
+  --on-dark:#F4F9F5;
+  --on-dark-2:#C5D9CD;
+  --pop:#4FD488;
+  --amber:#F59E0B;
+  --danger:#D93829;
+  --scrim:linear-gradient(to top,rgb(12 51 31 / .96) 0,rgb(12 51 31 / .88) calc(100% - 80px),rgb(12 51 31 / 0) 100%);
+  --shadow:0 20px 44px -16px rgb(12 51 31 / .38);
+  --shadow-sm:0 10px 26px -14px rgb(12 51 31 / .28);
+  --shadow-sticker:0 8px 0 rgb(12 51 31 / .16);
+  --font:"Montserrat",system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --gutter:clamp(16px,5vw,48px);
+  --sec:clamp(76px,10vw,132px);
+  --wave:clamp(42px,6.5vw,92px);
+  --blob:63% 37% 54% 46% / 55% 48% 52% 45%;
+  --blob-2:42% 58% 38% 62% / 51% 39% 61% 49%;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  overflow-x:clip;
+  background:var(--paper);
+  color:var(--slate);
+  font:500 1rem/1.62 var(--font);
+  padding-bottom:calc(82px + env(safe-area-inset-bottom,0px));
+}
+body.hide-verify .chip-verify{display:none !important}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,blockquote,figure,ul{margin:0}
+ul{padding:0;list-style:none}
+h1,h2,h3{
+  color:var(--ink);
+  font-weight:900;
+  text-wrap:balance;
+  overflow-wrap:break-word;
+  min-width:0;
+}
+h1,h2,.up{text-transform:uppercase;letter-spacing:-.025em}
+h2{font-size:clamp(2rem,1.1rem + 3.6vw,3.65rem);line-height:.98}
+h3{font-size:1.25rem;line-height:1.22}
+p{max-width:62ch;text-wrap:pretty}
+a{color:var(--green-deep)}
+:focus-visible{outline:3px solid var(--green-deep);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--paper);padding:10px 18px;border-radius:999px;font-weight:800;z-index:100}
+.skip:focus{left:12px}
+.wrap{max-width:calc(1220px + 2*var(--gutter));margin-inline:auto;padding-inline:var(--gutter)}
+.sec{padding-block:var(--sec);position:relative}
+.ico{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+/* Barra interattiva di controllo Mockup (in alto) */
+.mockup-bar{
+  background:var(--forest);
+  color:var(--on-dark);
+  font-size:.8125rem;
+  padding:8px var(--gutter);
+  border-bottom:2px solid var(--forest-2);
+  position:relative;
+  z-index:50;
+}
+.mockup-bar-inner{
+  max-width:1220px;
+  margin-inline:auto;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px 16px;
+}
+.mockup-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight:800;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:var(--pop);
+}
+.mockup-badge span{
+  width:9px;height:9px;border-radius:50%;background:var(--pop);
+  box-shadow:0 0 0 4px rgb(79 212 136 / .25);
+}
+.mockup-tools{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+}
+.tool-btn{
+  appearance:none;
+  border:1.5px solid rgb(255 255 255 / .24);
+  background:rgb(255 255 255 / .08);
+  color:var(--on-dark);
+  font:700 .75rem/1.2 var(--font);
+  padding:6px 12px;
+  border-radius:999px;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  transition:all .18s var(--ease);
+}
+.tool-btn:hover{background:var(--pop);color:var(--forest);border-color:var(--pop)}
+.tool-btn[aria-pressed="true"]{background:var(--pop);color:var(--forest);border-color:var(--pop)}
+
+/* Pulsanti stile Scott The Painter (chunky pill + tactile shadow) */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:54px;
+  padding:0 30px;
+  border-radius:999px;
+  background:var(--green-deep);
+  color:var(--paper);
+  font:900 1rem/1.1 var(--font);
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  text-decoration:none;
+  text-align:center;
+  border:2.5px solid var(--forest);
+  box-shadow:0 6px 0 var(--forest), var(--shadow-sm);
+  transition:transform 180ms var(--ease), box-shadow 180ms var(--ease), background-color 180ms var(--ease);
+  cursor:pointer;
+}
+.btn:hover{
+  background:var(--green);
+  transform:translateY(-3px);
+  box-shadow:0 9px 0 var(--forest), var(--shadow);
+}
+.btn:active{
+  transform:translateY(2px);
+  box-shadow:0 2px 0 var(--forest);
+}
+.btn.ghost{
+  background:var(--paper);
+  color:var(--forest);
+  border-color:var(--forest);
+}
+.btn.ghost:hover{background:var(--tint)}
+.btn.pop{
+  background:var(--pop);
+  border-color:var(--forest);
+  color:var(--forest);
+  box-shadow:0 6px 0 #072113;
+}
+.btn.pop:hover{
+  background:var(--on-dark);
+  box-shadow:0 9px 0 #072113;
+}
+.btn.light{
+  background:var(--paper);
+  border-color:var(--forest);
+  color:var(--forest);
+}
+.btn.light:hover{background:var(--tint)}
+
+.chip{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:4px 12px;
+  border:1.5px dashed var(--line);
+  border-radius:999px;
+  background:var(--paper);
+  color:var(--slate);
+  font-size:.78rem;
+  font-weight:700;
+  line-height:1.4;
+}
+.chip::before{
+  content:"";
+  width:7px;height:7px;border-radius:50%;
+  background:var(--amber);
+}
+
+/* Sottolineatura a pennellata/rullo (Scott The Painter signature) */
+.paint-mark{
+  position:relative;
+  display:inline-block;
+  color:var(--green-deep);
+  z-index:1;
+}
+.paint-mark::after{
+  content:"";
+  position:absolute;
+  left:-3%;
+  right:-3%;
+  bottom:.04em;
+  height:.32em;
+  background:var(--tint-2);
+  border-radius:999px 40% 999px 50%;
+  z-index:-1;
+  transform:rotate(-1.2deg);
+}
+
+/* Onde e blob */
+.wave{position:absolute;left:0;width:100%;height:var(--wave);display:block;pointer-events:none;fill:currentColor}
+.wave.top{bottom:calc(100% - 1px)}
+.wave.bot{top:calc(100% - 1px)}
+.blob-ico{
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:108px;
+  height:108px;
+  color:var(--forest);
+}
+.blob-ico::before{
+  content:"";
+  position:absolute;
+  inset:8px 0 0 12px;
+  background:var(--tint-2);
+  border-radius:var(--blob);
+  border:2.5px solid var(--forest);
+  box-shadow:0 5px 0 var(--forest);
+}
+.blob-ico .ico{position:relative;width:54px;height:54px;stroke-width:1.9}
+
+/* Header */
+.head{
+  position:relative;
+  z-index:40;
+  background:rgb(251 252 250 / .95);
+  backdrop-filter:blur(10px);
+}
+.head .wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  min-height:74px;
+}
+.logo{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+.logo img{height:44px;width:auto}
+.menu summary{
+  list-style:none;
+  display:grid;
+  place-items:center;
+  width:48px;
+  height:48px;
+  border-radius:999px;
+  background:var(--tint);
+  border:2px solid var(--forest);
+  color:var(--forest);
+  cursor:pointer;
+  box-shadow:0 3px 0 var(--forest);
+}
+.menu summary::-webkit-details-marker{display:none}
+.menu nav{
+  position:absolute;
+  left:0;right:0;top:100%;
+  background:var(--paper);
+  padding:8px var(--gutter) 24px;
+  border-bottom:3px solid var(--forest);
+  box-shadow:var(--shadow);
+}
+.menu nav a{
+  display:block;
+  padding:13px 0;
+  border-bottom:1px solid var(--tint-2);
+  color:var(--ink);
+  font-weight:800;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:.95rem;
+}
+.desk{display:none}
+
+/* Hero */
+.hero{padding-block:24px 28px;position:relative;overflow:hidden}
+.hero-deco-splatter{
+  position:absolute;
+  right:-80px;
+  top:-60px;
+  width:320px;
+  height:320px;
+  background:radial-gradient(circle, var(--tint-2) 0%, transparent 70%);
+  opacity:.65;
+  pointer-events:none;
+}
+.hero-grid{
+  display:grid;
+  gap:36px;
+  grid-template-columns:minmax(0,1fr);
+  align-items:center;
+}
+.hero-badges{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px;
+}
+.loc{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 16px 7px 12px;
+  border-radius:999px;
+  background:var(--tint);
+  border:2px solid var(--forest);
+  box-shadow:0 3px 0 var(--forest);
+  color:var(--forest);
+  font-weight:800;
+  font-size:.875rem;
+  text-transform:uppercase;
+}
+.loc .ico{width:19px;height:19px;color:var(--green-deep)}
+h1{
+  margin-top:18px;
+  font-size:clamp(2.65rem,1.25rem + 5.1vw,5.25rem);
+  line-height:.93;
+}
+h1 em{
+  font-style:normal;
+  color:var(--green-deep);
+  position:relative;
+  display:inline-block;
+}
+h1 em::after{
+  content:"";
+  position:absolute;
+  left:-2%;
+  right:-2%;
+  bottom:.03em;
+  height:.22em;
+  background:var(--tint-3);
+  border-radius:99px;
+  z-index:-1;
+  transform:rotate(-1.5deg);
+}
+.hero-copy>p{
+  margin-top:22px;
+  font-size:clamp(1.08rem,1rem + .35vw,1.25rem);
+  font-weight:600;
+  color:var(--ink);
+}
+.cta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px 16px;
+  margin-top:30px;
+}
+.cta .btn{flex:1 1 220px}
+.tel-line{
+  margin-top:22px;
+  font-weight:800;
+  font-size:1.05rem;
+  color:var(--ink);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.tel-line a{
+  color:var(--green-deep);
+  text-underline-offset:4px;
+  display:inline-block;
+  padding-block:4px;
+}
+
+/* Hero Art con cornice blob + sticker rotante stile Scott The Painter */
+.hero-art{
+  position:relative;
+  padding:5% 6% 4% 4%;
+  max-width:560px;
+  width:100%;
+  margin-inline:auto;
+}
+.hero-art::before{
+  content:"";
+  position:absolute;
+  inset:2% 1% 1% 2%;
+  background:var(--green);
+  border-radius:var(--blob);
+  border:3px solid var(--forest);
+  box-shadow:0 12px 0 var(--forest);
+}
+.hero-art::after{
+  content:"";
+  position:absolute;
+  inset:6% 5% 5% 6%;
+  background:var(--tint-2);
+  border-radius:var(--blob-2);
+  border:2.5px solid var(--forest);
+  z-index:0;
+}
+.hero-art img{
+  position:relative;
+  z-index:1;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  object-position:72% 50%;
+  border-radius:var(--blob-2);
+  border:3px solid var(--forest);
+  background:var(--tint);
+}
+
+/* ==========================================================================
+   IL FURGONCINO DI IMBIANCHINO SANO - ANIMATED ROAD STAGE (Scott The Painter)
+   ========================================================================== */
+.van-stage{
+  position:relative;
+  padding-top:28px;
+  padding-bottom:14px;
+  overflow:hidden;
+  background:linear-gradient(180deg, var(--paper) 0%, var(--tint) 78%, var(--tint-2) 100%);
+}
+.van-stage-header{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:12px;
+  position:relative;
+  z-index:5;
+}
+.van-route-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--paper);
+  border:2.5px solid var(--forest);
+  box-shadow:0 4px 0 var(--forest);
+  border-radius:999px;
+  padding:8px 18px;
+  font-weight:800;
+  font-size:.85rem;
+  color:var(--forest);
+  text-transform:uppercase;
+}
+.van-route-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 0 4px var(--tint-2);
+  animation:pulseDot 1.6s infinite;
+}
+@keyframes pulseDot{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.25)}
+}
+.van-controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.van-ctrl-btn{
+  appearance:none;
+  background:var(--paper);
+  color:var(--forest);
+  border:2px solid var(--forest);
+  box-shadow:0 4px 0 var(--forest);
+  border-radius:999px;
+  padding:8px 16px;
+  font:800 .8rem/1.1 var(--font);
+  text-transform:uppercase;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:transform .15s var(--ease), background-color .15s var(--ease);
+}
+.van-ctrl-btn:hover{
+  background:var(--pop);
+  transform:translateY(-2px);
+}
+.van-ctrl-btn:active{
+  transform:translateY(1px);
+  box-shadow:0 1px 0 var(--forest);
+}
+
+/* Scena stradale + colline venete */
+.road-viewport{
+  position:relative;
+  width:100%;
+  max-width:1220px;
+  margin-inline:auto;
+  height:clamp(210px, 32vw, 320px);
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  user-select:none;
+}
+.road-scenery{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+.road-line{
+  position:absolute;
+  left:0;right:0;
+  bottom:22px;
+  height:18px;
+  background:var(--forest);
+  border-radius:999px;
+}
+.road-dashes{
+  position:absolute;
+  left:0;right:0;
+  bottom:29px;
+  height:4px;
+  background:repeating-linear-gradient(90deg, var(--pop) 0 36px, transparent 36px 76px);
+  opacity:.85;
+  animation:roadScroll 1.4s linear infinite;
+}
+.van-stage.paused .road-dashes{animation-play-state:paused}
+@keyframes roadScroll{
+  from{background-position:0 0}
+  to{background-position:-76px 0}
+}
+
+/* Contenitore furgoncino animato */
+.van-actor{
+  position:relative;
+  z-index:4;
+  width:clamp(300px, 58vw, 600px);
+  margin-bottom:20px;
+  cursor:pointer;
+  transition:transform .35s var(--ease);
+  animation:vanCruise 6.5s ease-in-out infinite;
+}
+.van-stage.paused .van-actor{animation-play-state:paused}
+.van-actor:hover{
+  transform:scale(1.02);
+}
+@keyframes vanCruise{
+  0%,100%{transform:translateX(-18px)}
+  50%{transform:translateX(22px)}
+}
+.van-chassis-bounce{
+  animation:chassisBounce .55s ease-in-out infinite alternate;
+  transform-origin:center bottom;
+}
+.van-stage.paused .van-chassis-bounce{animation-play-state:paused}
+@keyframes chassisBounce{
+  0%{transform:translateY(0) rotate(0deg)}
+  100%{transform:translateY(-3.5px) rotate(-.35deg)}
+}
+.van-wheel-spin{
+  transform-box:fill-box;
+  transform-origin:center;
+  animation:wheelSpin 1.1s linear infinite;
+}
+.van-stage.paused .van-wheel-spin{animation-play-state:paused}
+@keyframes wheelSpin{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+/* Nuvolette ecologiche dallo scarico (foglie/aria pulita invece di fumo grigio!) */
+.eco-puff{
+  animation:puffFloat 1.8s ease-out infinite;
+  transform-origin:center;
+}
+.eco-puff.p2{animation-delay:.6s}
+.eco-puff.p3{animation-delay:1.2s}
+@keyframes puffFloat{
+  0%{transform:translate(0,0) scale(.5);opacity:.9}
+  100%{transform:translate(-48px,-22px) scale(1.35);opacity:0}
+}
+
+/* Clacson / Fumetto "BEEP BEEP!" */
+.horn-bubble{
+  position:absolute;
+  top:-14px;
+  right:8%;
+  background:var(--pop);
+  color:var(--forest);
+  border:3px solid var(--forest);
+  box-shadow:0 5px 0 var(--forest);
+  padding:8px 16px;
+  border-radius:999px;
+  font:900 .85rem/1.1 var(--font);
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  opacity:0;
+  transform:translateY(12px) scale(.85) rotate(4deg);
+  transition:all .22s var(--ease);
+  pointer-events:none;
+  z-index:10;
+}
+.horn-bubble.active{
+  opacity:1;
+  transform:translateY(0) scale(1) rotate(-3deg);
+}
+
+/* Fascio fari */
+.headlight-beam{
+  opacity:0;
+  transition:opacity .25s ease;
+}
+.lights-on .headlight-beam{
+  opacity:.85;
+}
+
+/* Girofaro sul tetto */
+.beacon-glow{
+  animation:beaconFlash 1.1s ease-in-out infinite;
+  transform-origin:center;
+}
+@keyframes beaconFlash{
+  0%,100%{opacity:.25;transform:scale(.9)}
+  50%{opacity:1;transform:scale(1.15)}
+}
+
+/* Chi sono: sezione scura */
+.dark{background:var(--forest);color:var(--on-dark-2);margin-block:var(--wave)}
+.dark .wave{color:var(--forest)}
+.dark h2,.dark h3{color:var(--on-dark)}
+.split{display:grid;gap:48px;grid-template-columns:minmax(0,1fr);align-items:center}
+.about h2 span{display:block;color:var(--pop)}
+.lead{margin-top:28px;font-size:clamp(1.25rem,1rem + 1vw,1.625rem);font-weight:800;line-height:1.35;color:var(--on-dark)}
+.about p+p{margin-top:16px;line-height:1.72}
+.photo-card{
+  position:relative;
+  border-radius:30px;
+  overflow:hidden;
+  border:3px solid var(--forest);
+  box-shadow:0 12px 0 rgb(0 0 0 / .28), var(--shadow);
+  isolation:isolate;
+  background:var(--forest-2);
+}
+.dark .photo-card{
+  border-color:var(--pop);
+  box-shadow:0 12px 0 #072113, var(--shadow);
+}
+.photo-card img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.photo-card .over{
+  position:absolute;
+  inset:auto 0 0 0;
+  padding:76px 26px 26px;
+  background:var(--scrim);
+  display:grid;
+  gap:12px;
+  justify-items:start;
+}
+.photo-card .over h3{font-size:clamp(1.5rem,1rem + 1.6vw,2.25rem);line-height:1;color:var(--on-dark)}
+.photo-card .over p{color:var(--on-dark);font-weight:700}
+.about .photo-card img{object-position:50% 30%}
+
+/* Quello che non uso */
+.nouse{text-align:center}
+.nouse h2{max-width:14ch;margin-inline:auto}
+.nouse-grid{
+  display:grid;
+  gap:40px;
+  grid-template-columns:minmax(0,1fr);
+  align-items:center;
+  margin-top:56px;
+}
+.nouse-item{
+  display:grid;
+  justify-items:center;
+  gap:18px;
+  background:var(--tint);
+  border:2.5px solid var(--forest);
+  box-shadow:0 8px 0 var(--forest);
+  border-radius:28px;
+  padding:32px 24px;
+}
+.nouse-item h3{
+  font-size:clamp(1.2rem,1rem + .75vw,1.5rem);
+  max-width:16ch;
+  text-transform:uppercase;
+  letter-spacing:-.01em;
+}
+.nouse-item .blob-ico{width:128px;height:128px}
+.nouse-item .blob-ico::before{background:var(--paper)}
+.nouse-item .blob-ico .ico{width:68px;height:68px}
+.slash{
+  position:absolute;
+  width:88px;
+  height:6px;
+  background:var(--danger);
+  border:1.5px solid var(--forest);
+  border-radius:6px;
+  transform:rotate(-40deg);
+}
+.nouse-photo{
+  position:relative;
+  max-width:380px;
+  width:100%;
+  margin-inline:auto;
+  padding:5%;
+}
+.nouse-photo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--tint-2);
+  border-radius:var(--blob-2);
+  border:3px solid var(--forest);
+  box-shadow:0 10px 0 var(--forest);
+}
+.nouse-photo img{
+  position:relative;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:50%;
+  border:3px solid var(--forest);
+  background:var(--paper);
+}
+.nouse .btn{margin-top:48px}
+
+/* Prodotto */
+.prod{background:var(--tint);border-top:3px solid var(--forest);border-bottom:3px solid var(--forest)}
+.prod-art{position:relative;padding:0 4% 6% 0}
+.prod-art::before{
+  content:"";
+  position:absolute;
+  inset:8% 0 0 8%;
+  background:var(--green);
+  border-radius:var(--blob);
+  border:3px solid var(--forest);
+}
+.prod-art img{
+  position:relative;
+  width:100%;
+  aspect-ratio:5/4;
+  object-fit:cover;
+  object-position:50% 60%;
+  border-radius:28px;
+  border:3px solid var(--forest);
+  box-shadow:var(--shadow);
+  background:var(--paper);
+}
+.prod .sub{
+  margin-top:16px;
+  font-size:1.3rem;
+  font-weight:800;
+  color:var(--green-deep);
+  text-transform:uppercase;
+}
+.claims{display:grid;gap:22px;margin-top:32px}
+.claims li{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:18px;
+  align-items:center;
+  background:var(--paper);
+  border:2.5px solid var(--forest);
+  box-shadow:0 6px 0 var(--forest);
+  border-radius:22px;
+  padding:16px 20px;
+}
+.claims .blob-ico{width:68px;height:68px}
+.claims .blob-ico::before{background:var(--tint-2);inset:4px 0 0 6px}
+.claims .blob-ico .ico{width:34px;height:34px}
+.claims h3{font-size:1.1rem;text-transform:uppercase;letter-spacing:-.01em}
+.claims .chip{margin-top:6px}
+.prod .btn{margin-top:40px}
+
+/* Banda verde: quello che gli imbianchini non dicono */
+.band{background:var(--green-deep);color:var(--on-dark);margin-block:var(--wave)}
+.band .wave{color:var(--green-deep)}
+.band h2{color:var(--on-dark);max-width:16ch}
+.band-deco{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.band-deco i{position:absolute;background:var(--green-band);border-radius:var(--blob)}
+.band-deco i:nth-child(1){width:420px;height:300px;right:-160px;top:18%}
+.band-deco i:nth-child(2){width:300px;height:240px;left:-140px;bottom:12%;border-radius:var(--blob-2)}
+.band .wrap{position:relative}
+.band p{margin-top:24px;color:var(--on-dark);line-height:1.72;font-weight:600}
+.voc{
+  margin-top:32px;
+  padding:32px;
+  border-radius:28px;
+  background:var(--paper);
+  color:var(--ink);
+  border:3px solid var(--forest);
+  box-shadow:0 10px 0 var(--forest), var(--shadow);
+  position:relative;
+}
+.voc::before{
+  content:"“";
+  position:absolute;
+  top:-28px;
+  left:24px;
+  width:52px;height:52px;
+  border-radius:50%;
+  background:var(--pop);
+  border:3px solid var(--forest);
+  color:var(--forest);
+  display:grid;
+  place-items:center;
+  font:900 2.5rem/1 var(--font);
+}
+.voc q{
+  display:block;
+  quotes:none;
+  font-size:clamp(1.45rem,1rem + 2.1vw,2.35rem);
+  font-weight:900;
+  line-height:1.1;
+  text-transform:uppercase;
+  letter-spacing:-.02em;
+  color:var(--forest);
+}
+.voc .chip{margin-top:16px}
+.band .btn{margin-top:32px}
+
+/* Ventilazione */
+.vent-art{position:relative;padding:6% 0 0 6%}
+.vent-art::before{
+  content:"";
+  position:absolute;
+  inset:0 8% 10% 0;
+  background:var(--tint-2);
+  border-radius:var(--blob-2);
+  border:3px solid var(--forest);
+}
+.vent-art img{
+  position:relative;
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  object-position:50% 30%;
+  border-radius:28px;
+  border:3px solid var(--forest);
+  box-shadow:0 10px 0 var(--forest);
+  background:var(--tint);
+}
+.vent h2 span{
+  display:block;
+  margin-top:12px;
+  font-size:max(.52em,1.15rem);
+  line-height:1.15;
+  letter-spacing:-.01em;
+  color:var(--green-deep);
+}
+.vent p{margin-top:24px}
+.vent .chip{margin-top:16px}
+.vent .btn{margin-top:32px}
+
+/* Recensioni */
+.rev{background:var(--tint);border-top:3px solid var(--forest);border-bottom:3px solid var(--forest)}
+.rev-head{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:end;
+  justify-content:space-between;
+  gap:16px;
+}
+.rev-list{
+  display:grid;
+  grid-auto-flow:column;
+  grid-auto-columns:86%;
+  gap:20px;
+  margin-top:40px;
+  padding-bottom:16px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  overscroll-behavior-x:contain;
+}
+.rev-card{
+  scroll-snap-align:start;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  padding:28px;
+  border-radius:28px;
+  background:var(--paper);
+  border:2.5px solid var(--forest);
+  box-shadow:0 8px 0 var(--forest);
+}
+.rev-quote-mark{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight:900;
+  font-size:.78rem;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  color:var(--green-deep);
+}
+.rev-quote-mark span{
+  display:inline-grid;
+  place-items:center;
+  width:30px;height:30px;
+  border-radius:10px;
+  background:var(--tint-2);
+  border:2px solid var(--forest);
+  color:var(--forest);
+  font-size:1.1rem;
+}
+.rev-card blockquote p{color:var(--ink);line-height:1.62;font-weight:500}
+.rev-card blockquote p+p{margin-top:10px}
+.rev-card cite{
+  margin-top:auto;
+  padding-top:12px;
+  border-top:1.5px dashed var(--tint-2);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-style:normal;
+  font-weight:900;
+  color:var(--ink);
+  text-transform:uppercase;
+  letter-spacing:.01em;
+}
+.rev-card cite::before{
+  content:"";
+  width:32px;
+  height:32px;
+  flex:none;
+  background:var(--green);
+  border:2px solid var(--forest);
+  border-radius:var(--blob);
+}
+.rev-card.big blockquote p{font-size:1.1rem;font-weight:600}
+
+/* Altro: Canale YouTube e Libro */
+.more{display:grid;gap:28px;grid-template-columns:minmax(0,1fr)}
+.more .photo-card img{aspect-ratio:4/5;object-position:50% 30%}
+.book{
+  display:grid;
+  gap:20px;
+  padding:32px;
+  border-radius:30px;
+  background:var(--tint);
+  border:3px solid var(--forest);
+  box-shadow:0 10px 0 var(--forest);
+}
+.book img{
+  width:100%;
+  max-width:320px;
+  margin-inline:auto;
+  aspect-ratio:5/4;
+  object-fit:contain;
+  mix-blend-mode:multiply;
+}
+.book h3{
+  font-size:clamp(1.5rem,1rem + 1.6vw,2.25rem);
+  line-height:1;
+  text-transform:uppercase;
+  letter-spacing:-.02em;
+}
+.book .btn{justify-self:start}
+
+/* Contatti + Footer */
+.contact{background:var(--forest);color:var(--on-dark-2);margin-top:var(--wave);padding-bottom:64px}
+.contact .wave{color:var(--forest)}
+.contact h2{color:var(--on-dark);font-size:clamp(2.5rem,1rem + 6vw,5.25rem)}
+.contact .lead{margin-top:20px}
+.contact .lead+p{margin-top:12px;color:var(--on-dark-2)}
+.contact .btn{margin-top:32px}
+.ways{display:grid;gap:20px}
+.ways li{
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr);
+  gap:16px;
+  align-items:center;
+  color:var(--on-dark);
+  font-weight:700;
+  background:var(--forest-2);
+  border:2px solid rgb(255 255 255 / .14);
+  padding:16px 20px;
+  border-radius:24px;
+}
+.ways a{color:var(--on-dark);text-underline-offset:4px;display:inline-block;padding-block:4px;overflow-wrap:anywhere}
+.ways .blob-ico{width:64px;height:64px;color:var(--forest)}
+.ways .blob-ico::before{inset:4px 0 0 6px;background:var(--pop);border-color:#072113;box-shadow:0 4px 0 #072113}
+.ways .blob-ico .ico{width:28px;height:28px;stroke-width:2.2}
+.ways .big{font-size:clamp(1.35rem,1rem + 1.8vw,2.1rem);font-weight:900;line-height:1.1;color:var(--pop)}
+.contact :focus-visible,.foot :focus-visible{outline-color:var(--pop)}
+
+.foot{
+  background:var(--forest);
+  color:var(--on-dark-2);
+  font-size:.9375rem;
+  padding-block:48px 36px;
+  border-top:2px solid var(--forest-2);
+}
+.foot .wrap{display:grid;gap:32px;grid-template-columns:minmax(0,1fr)}
+.foot img{height:44px;width:auto}
+.foot p{margin-top:16px}
+.foot address{font-style:normal;line-height:1.85}
+.foot a{color:var(--on-dark);display:inline-block;padding-block:4px;text-underline-offset:4px}
+.foot nav{display:flex;flex-wrap:wrap;gap:6px 24px;font-weight:800;align-content:start}
+
+/* Barra mobile fissa */
+.bar{
+  position:fixed;
+  inset:auto 0 0;
+  z-index:45;
+  background:var(--paper);
+  border-top:2.5px solid var(--forest);
+  box-shadow:var(--shadow);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));
+}
+.bar .btn{width:100%}
+
+@media (min-width:700px){
+  .nouse-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr) minmax(0,1fr)}
+  .more{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch}
+  .more .photo-card img{height:100%;aspect-ratio:auto;min-height:420px}
+  .rev-list{grid-auto-flow:row;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;padding-bottom:0}
+  .rev-card.big{grid-row:span 2}
+  .foot .wrap{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr)}
+}
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .bar,.menu{display:none}
+  .head{position:sticky;top:env(safe-area-inset-top,0px);border-bottom:2px solid var(--tint-2)}
+  .head .wrap{min-height:88px}
+  .logo img{height:52px}
+  .desk{display:flex;align-items:center;gap:22px}
+  .desk a:not(.btn){
+    color:var(--ink);
+    font-weight:800;
+    font-size:.9rem;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding:12px 0;
+  }
+  .desk a:not(.btn):hover{
+    color:var(--green-deep);
+    text-decoration:underline;
+    text-decoration-thickness:3px;
+    text-underline-offset:8px;
+  }
+  .desk .btn{min-height:48px;padding:0 24px}
+  .hero{padding-block:32px 24px}
+  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:56px}
+  .hero-art{max-width:none}
+  .cta .btn{flex:0 0 auto}
+  .split{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:80px}
+  .split.flip{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
+  .about .photo-card{transform:rotate(2deg)}
+  .band .split{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+  .voc{margin-top:0;padding:40px}
+  .rev-list{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rev-card:last-child{grid-column:span 2}
+  .contact .split{align-items:end}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn,.van-actor,.van-chassis-bounce,.van-wheel-spin,.road-dashes,.eco-puff,.beacon-glow{
+    animation:none !important;
+    transition:none !important;
+  }
+}
+</style>
+</head>
+<body>
+<!-- DEFINIZIONE ICONE E FURGONCINO SVG FEDELE ALLE FOTO REALI DI IMRI GASI -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5-2.5l5 2v4a2 2 0 0 1-2 2a16 16 0 0 1-15-15a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 7l9 6l9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-bucket" viewBox="0 0 24 24"><path d="M4 7a8 4 0 1 0 16 0a8 4 0 1 0-16 0"/><path d="M4 7c0 .66.09 1.32.26 1.97L7 19c.5 1.5 2.24 2 5 2s4.5-.5 5-2c.33-1 1.25-4.35 2.74-10.04A7.45 7.45 0 0 0 20 7"/></symbol>
+  <symbol id="i-roller" viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"/><path d="M19 6h1a2 2 0 0 1 2 2a5 5 0 0 1-5 5h-5v2"/><path d="M10 16a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M7.5 19.42c2.6 2.1 6.4 2.1 9 0s3.26-5.7 1.56-8.54l-4.89-7.26a1.4 1.4 0 0 0-2.34 0l-4.9 7.26c-1.69 2.84-1.03 6.44 1.57 8.54z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M5 12H3l9-9l9 9h-2"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/><path d="M10 21v-6h4v6"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 24 24"><path d="M5 8h8.5a2.5 2.5 0 1 0-2.34-3.24"/><path d="M3 12h15.5a2.5 2.5 0 1 1-2.34 3.24"/><path d="M4 16h5.5a2.5 2.5 0 1 1-2.34 3.24"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></symbol>
+  <symbol id="wave-top" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0 100V48C180 10 380 0 620 28s520 62 820 8v64z"/></symbol>
+  <symbol id="wave-bot" viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0 0h1440v42c-220 48-470 58-760 30S200 30 0 70z"/></symbol>
+
+    <!-- ========================================================================
+       ILLUSTRAZIONE VETTORIALE DEL FURGONCINO REALE DI IMRI GASI
+       Ricostruita fedelmente dalle foto fornite (image_3cac8a.png & image_3cac70.png)
+       ======================================================================== -->
+  <symbol id="van-imbianchino-sano" viewBox="0 0 820 360">
+    <defs>
+      <linearGradient id="vanBodyGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FFFFFF"/>
+        <stop offset="78%" stop-color="#F6FAF7"/>
+        <stop offset="100%" stop-color="#E4EFE8"/>
+      </linearGradient>
+      <linearGradient id="vanGreenPanel" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#00A849"/>
+        <stop offset="100%" stop-color="#007E38"/>
+      </linearGradient>
+      <linearGradient id="vanGlass" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#27323F"/>
+        <stop offset="55%" stop-color="#1A222C"/>
+        <stop offset="100%" stop-color="#324152"/>
+      </linearGradient>
+      <linearGradient id="headlightRay" x1="0" y1="0.5" x2="1" y2="0.5">
+        <stop offset="0%" stop-color="#FFF59D" stop-opacity="0.85"/>
+        <stop offset="100%" stop-color="#FFF59D" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Ombra a terra -->
+    <ellipse cx="415" cy="326" rx="325" ry="14" fill="#0C331F" opacity="0.22"/>
+
+    <!-- Sbuffi ecologici (foglie/bollicine verdi di aria sana) -->
+    <g class="eco-puff p1">
+      <circle cx="62" cy="272" r="10" fill="#4FD488" stroke="#0C331F" stroke-width="2.5"/>
+    </g>
+    <g class="eco-puff p2">
+      <circle cx="42" cy="262" r="14" fill="#CFEBD9" stroke="#0C331F" stroke-width="2.5"/>
+      <path d="M37 262 Q42 254 48 262 Q42 268 37 262Z" fill="#009B43"/>
+    </g>
+    <g class="eco-puff p3">
+      <circle cx="24" cy="248" r="8" fill="#009B43" stroke="#0C331F" stroke-width="2"/>
+    </g>
+
+    <!-- GRUPPO CARROZZERIA (con molleggio) -->
+    <g class="van-chassis-bounce">
+      <!-- Fascio luminoso fari anteriori (attivo con toggle o hover) -->
+      <polygon class="headlight-beam" points="738,198 818,162 818,262 738,236" fill="url(#headlightRay)"/>
+
+      <!-- Antenna e cono nero anteriore + Girofaro ambra sul tetto (visibili nella foto 2) -->
+      <polygon points="195,58 212,26 229,58" fill="#232830" stroke="#0C331F" stroke-width="3" stroke-linejoin="round"/>
+      <line x1="212" y1="26" x2="212" y2="12" stroke="#0C331F" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Girofaro arancione di servizio sul tetto -->
+      <g transform="translate(345, 34)">
+        <circle class="beacon-glow" cx="14" cy="10" r="22" fill="#F59E0B" opacity="0.45"/>
+        <path d="M4 22 L8 6 C9 3 19 3 20 6 L24 22 Z" fill="#F59E0B" stroke="#0C331F" stroke-width="3"/>
+        <rect x="2" y="20" width="24" height="5" rx="2" fill="#232830" stroke="#0C331F" stroke-width="2"/>
+      </g>
+
+      <!-- Portapacchi / barre tetto discrete -->
+      <rect x="255" y="52" width="240" height="6" rx="3" fill="#2F343D" stroke="#0C331F" stroke-width="2"/>
+
+      <!-- SAGOMA PRINCIPALE FURGONE (Stile Fiat Scudo / Peugeot Expert Bianco L1H1) -->
+      <path d="M 104 268
+               L 96 268
+               C 88 268 84 260 84 248
+               L 84 198
+               L 92 86
+               C 94 68 108 56 128 56
+               L 512 56
+               C 548 56 574 66 598 94
+               L 668 172
+               L 724 186
+               C 740 190 748 202 748 220
+               L 748 258
+               C 748 268 740 274 726 274
+               L 104 274 Z"
+            fill="url(#vanBodyGrad)"
+            stroke="#0C331F"
+            stroke-width="5"
+            stroke-linejoin="round"/>
+
+      <!-- Ombra sottile sottoscocca e nervatura superiore carrozzeria -->
+      <path d="M 102 252 L 736 252 L 736 272 L 102 272 Z" fill="#D5E4DC"/>
+      <line x1="108" y1="78" x2="555" y2="78" stroke="#DCE8E0" stroke-width="3" stroke-linecap="round"/>
+
+      <!-- Fanale posteriore rosso verticale (visibile a sinistra nella foto 2) -->
+      <path d="M 88 142 L 98 142 L 96 220 L 86 220 Z" fill="#D93829" stroke="#0C331F" stroke-width="3.5" stroke-linejoin="round"/>
+      <rect x="88" y="176" width="8" height="16" fill="#FDE047"/>
+
+      <!-- Paraurti posteriore nero + sensori -->
+      <path d="M 78 228 L 114 228 C 118 228 120 232 120 238 L 120 274 L 84 274 C 78 274 76 268 76 260 L 76 234 C 76 230 77 228 78 228 Z"
+            fill="#232830" stroke="#0C331F" stroke-width="4"/>
+
+      <!-- ====================================================================
+           LIVREA VERDE LATERALE POSTERIORE + TESTO BIANCO (Fedele alle foto!)
+           "SCEGLI DI DIPINGERE / IN MODO NATURALE / IMBIANCHINO SANO"
+           ==================================================================== -->
+      <path d="M 118 86
+               L 358 86
+               L 358 194
+               L 146 194
+               C 122 194 112 180 112 156
+               L 112 94
+               C 112 89 114 86 118 86 Z"
+            fill="url(#vanGreenPanel)"
+            stroke="#0C331F"
+            stroke-width="3.5"
+            stroke-linejoin="round"/>
+
+      <!-- Linea di divisione portellone scorrevole (attraversa la grafica come nel furgone vero) -->
+      <line x1="322" y1="74" x2="322" y2="256" stroke="#0C331F" stroke-width="2.5" stroke-dasharray="180 6"/>
+
+      <!-- Testo bianco condensato sul pannello verde -->
+      <g fill="#FFFFFF" font-family="Montserrat, sans-serif" font-weight="900" text-anchor="middle">
+        <text x="234" y="119" font-size="17.5" letter-spacing="-0.3" transform="scale(0.92, 1.08) translate(19, -8)">SCEGLI DI DIPINGERE</text>
+        <text x="234" y="143" font-size="17.5" letter-spacing="-0.3" transform="scale(0.92, 1.08) translate(19, -9)">IN MODO NATURALE</text>
+        <text x="234" y="176" font-size="23.5" letter-spacing="-0.6" transform="scale(0.90, 1.12) translate(25, -18)">IMBIANCHINO SANO</text>
+      </g>
+
+      <!-- ====================================================================
+           PITTOGRAMMA CENTRALE "ih" CON PROFILO CASA E IMPUGNATURA RULLO
+           (Esattamente a destra del blocco verde, sulla porta scorrevole)
+           ==================================================================== -->
+      <!-- Pannello scuro del finestrino porta scorrevole che si integra col logo -->
+      <path d="M 418 88 L 492 88 L 492 178 L 418 178 Z"
+            fill="url(#vanGlass)" stroke="#0C331F" stroke-width="3.5" stroke-linejoin="round"/>
+
+      <!-- Sagoma trapezoidale antracite del marchio con bordo bianco (come in foto 2) -->
+      <g transform="translate(364, 82)">
+        <!-- Sfondo edificio antracite -->
+        <path d="M 6 12 L 54 4 L 54 134 L 6 148 Z"
+              fill="#2B303A" stroke="#FFFFFF" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M 6 12 L 54 4 L 54 134 L 6 148 Z"
+              fill="none" stroke="#0C331F" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- Dettaglio camino superiore -->
+        <rect x="16" y="2" width="12" height="10" fill="#2B303A" stroke="#0C331F" stroke-width="2.5"/>
+
+        <!-- Monogramma "h" / braccio del rullo che scende -->
+        <path d="M 18 28 L 18 126" stroke="#FFFFFF" stroke-width="6.5" stroke-linecap="round"/>
+        <path d="M 18 76 L 40 76 C 48 76 52 81 52 89 L 52 108"
+              fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+        <path d="M 18 76 L 40 76 C 48 76 52 81 52 89 L 52 108"
+              fill="none" stroke="#2B303A" stroke-width="2.5" stroke-linecap="round"/>
+
+        <!-- Impugnatura verticale del rullo da pittore (in basso a destra del logo) -->
+        <rect x="44" y="98" width="15" height="42" rx="7.5"
+              fill="#2B303A" stroke="#FFFFFF" stroke-width="4"/>
+        <rect x="44" y="98" width="15" height="42" rx="7.5"
+              fill="none" stroke="#0C331F" stroke-width="2.5"/>
+        <line x1="51.5" y1="106" x2="51.5" y2="132" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+      </g>
+
+      <!-- FINESTRINO CABINA ANTERIORE + SPECCHIETTO + MANIGLIE -->
+      <path d="M 510 88
+               L 566 88
+               C 584 88 602 98 618 118
+               L 654 166
+               L 510 166 Z"
+            fill="url(#vanGlass)"
+            stroke="#0C331F"
+            stroke-width="4"
+            stroke-linejoin="round"/>
+      <!-- Riflesso diagonale sul vetro cabina -->
+      <polygon points="532,92 554,92 526,162 514,162" fill="#FFFFFF" opacity="0.16"/>
+      <polygon points="562,92 572,92 544,162 534,162" fill="#FFFFFF" opacity="0.1"/>
+
+      <!-- Volante e sagoma conducente (Imri!) dentro la cabina -->
+      <circle cx="584" cy="124" r="14" fill="#4FD488" stroke="#0C331F" stroke-width="2.5"/>
+      <path d="M 566 162 C 568 144 598 144 602 162 Z" fill="#009B43" stroke="#0C331F" stroke-width="2.5"/>
+      <line x1="628" y1="142" x2="612" y2="162" stroke="#0C331F" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- Specchietto retrovisore esterno nero -->
+      <path d="M 632 142 L 652 134 C 658 134 662 140 662 150 L 662 166 C 662 172 656 174 650 172 L 632 166 Z"
+            fill="#232830" stroke="#0C331F" stroke-width="3.5"/>
+
+      <!-- Linea portiera anteriore -->
+      <path d="M 502 82 L 502 252 M 656 166 L 656 250" stroke="#0C331F" stroke-width="2.5"/>
+
+      <!-- Modanatura paracolpi laterale nera (come nelle foto) -->
+      <rect x="112" y="202" width="210" height="8" rx="3" fill="#232830"/>
+      <path d="M 326 226 L 642 226 C 648 226 650 236 642 238 L 326 238 C 320 238 320 226 326 226 Z"
+            fill="#232830" stroke="#0C331F" stroke-width="2"/>
+
+      <!-- Maniglie portiere nere -->
+      <rect x="334" y="188" width="22" height="7" rx="3.5" fill="#232830" stroke="#0C331F" stroke-width="2"/>
+      <rect x="514" y="182" width="22" height="7" rx="3.5" fill="#232830" stroke="#0C331F" stroke-width="2"/>
+
+      <!-- SCRITTA VERDE SULLA MINIGONNA INFERIORE: www.imbianchinosano.it (visibile nelle foto!) -->
+      <text x="484" y="256" font-family="Montserrat, sans-serif" font-weight="900" font-size="17.5" fill="#009B43" text-anchor="middle" letter-spacing="0.2">www.imbianchinosano.it</text>
+
+      <!-- Fanale anteriore + calandra e paraurti anteriore -->
+      <path d="M 702 186 L 738 194 C 742 200 744 210 742 218 L 706 218 C 698 218 696 196 702 186 Z"
+            fill="#E0F2FE" stroke="#0C331F" stroke-width="3.5"/>
+      <circle cx="724" cy="204" r="6" fill="#FDE047"/>
+
+      <!-- Paraurti anteriore avvolgente antracite -->
+      <path d="M 678 228 L 748 228 C 754 228 756 236 756 248 L 756 266 C 756 272 748 276 736 276 L 678 276 Z"
+            fill="#232830" stroke="#0C331F" stroke-width="4" stroke-linejoin="round"/>
+      <rect x="716" y="244" width="26" height="12" rx="4" fill="#3B4252" stroke="#0C331F" stroke-width="2"/>
+
+      <!-- Passaruota sagomati -->
+      <path d="M 142 274 A 64 64 0 0 1 270 274" fill="#0C331F"/>
+      <path d="M 578 274 A 64 64 0 0 1 706 274" fill="#0C331F"/>
+    </g>
+
+    <!-- ====================================================================
+         RUOTE CON CERCHIONI IN ACCIAIO FORATI (Fedeli alle foto reali!)
+         ==================================================================== -->
+    <!-- RUOTA POSTERIORE -->
+    <g transform="translate(206, 276)">
+      <g class="van-wheel-spin">
+        <!-- Pneumatico -->
+        <circle cx="0" cy="0" r="50" fill="#232830" stroke="#0C331F" stroke-width="5"/>
+        <circle cx="0" cy="0" r="41" fill="none" stroke="#363D49" stroke-width="2" stroke-dasharray="10 6"/>
+        <!-- Cerchione argento con i tipici fori circolari (come si vede nella foto 1 e 2) -->
+        <circle cx="0" cy="0" r="31" fill="#D8E0E5" stroke="#0C331F" stroke-width="3.5"/>
+        <circle cx="0" cy="0" r="22" fill="#BFC9D0" stroke="#6C7680" stroke-width="1.5"/>
+        <!-- 8 fori di ventilazione del cerchio in acciaio -->
+        <circle cx="0" cy="-16" r="3.6" fill="#232830"/>
+        <circle cx="11.3" cy="-11.3" r="3.6" fill="#232830"/>
+        <circle cx="16" cy="0" r="3.6" fill="#232830"/>
+        <circle cx="11.3" cy="11.3" r="3.6" fill="#232830"/>
+        <circle cx="0" cy="16" r="3.6" fill="#232830"/>
+        <circle cx="-11.3" cy="11.3" r="3.6" fill="#232830"/>
+        <circle cx="-16" cy="0" r="3.6" fill="#232830"/>
+        <circle cx="-11.3" cy="-11.3" r="3.6" fill="#232830"/>
+        <!-- Mozzo centrale -->
+        <circle cx="0" cy="0" r="8" fill="#8C96A0" stroke="#0C331F" stroke-width="2.5"/>
+      </g>
+    </g>
+
+    <!-- RUOTA ANTERIORE -->
+    <g transform="translate(642, 276)">
+      <g class="van-wheel-spin">
+        <circle cx="0" cy="0" r="50" fill="#232830" stroke="#0C331F" stroke-width="5"/>
+        <circle cx="0" cy="0" r="41" fill="none" stroke="#363D49" stroke-width="2" stroke-dasharray="10 6"/>
+        <circle cx="0" cy="0" r="31" fill="#D8E0E5" stroke="#0C331F" stroke-width="3.5"/>
+        <circle cx="0" cy="0" r="22" fill="#BFC9D0" stroke="#6C7680" stroke-width="1.5"/>
+        <circle cx="0" cy="-16" r="3.6" fill="#232830"/>
+        <circle cx="11.3" cy="-11.3" r="3.6" fill="#232830"/>
+        <circle cx="16" cy="0" r="3.6" fill="#232830"/>
+        <circle cx="11.3" cy="11.3" r="3.6" fill="#232830"/>
+        <circle cx="0" cy="16" r="3.6" fill="#232830"/>
+        <circle cx="-11.3" cy="11.3" r="3.6" fill="#232830"/>
+        <circle cx="-16" cy="0" r="3.6" fill="#232830"/>
+        <circle cx="-11.3" cy="-11.3" r="3.6" fill="#232830"/>
+        <circle cx="0" cy="0" r="8" fill="#8C96A0" stroke="#0C331F" stroke-width="2.5"/>
+      </g>
+    </g>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">Vai al contenuto</a>
+
+<!-- Barra anteprima mockup: mostra/nasconde i chip da verificare -->
+<aside class="mockup-bar" aria-label="Controlli anteprima mockup">
+  <div class="mockup-bar-inner">
+    <div class="mockup-badge">
+      <span></span>
+      Anteprima mockup
+    </div>
+    <div class="mockup-tools">
+      <button type="button" class="tool-btn" id="toggleVerifyBtn" aria-pressed="true">
+        Chip [da verificare con Imri]: <strong>VISIBILI</strong>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<header class="head">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Imbianchino Sano - Torna all'inizio">
+      <img src="assets/logo-imbianchinosano.svg" width="251" height="63" alt="Imbianchino Sano">
+    </a>
+    <nav class="desk" aria-label="Principale">
+      <a href="https://imbianchinosano.it/chi-sono/">Chi sono</a>
+      <a href="https://imbianchinosano.it/servizi/">Servizi</a>
+      <a href="https://imbianchinosano.it/il-mio-prodotto/">Il mio prodotto</a>
+      <a href="https://imbianchinosano.it/sistema-di-ventilazione/">Ventilazione meccanica</a>
+      <a href="https://imbianchinosano.it/info-utili/">Info utili</a>
+      <a href="#contatti">Contatti</a>
+      <a class="btn" href="tel:+393209781570"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Chiama</a>
+    </nav>
+    <details class="menu" id="mobileMenu">
+      <summary aria-label="Menu"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></summary>
+      <nav aria-label="Principale">
+        <a href="https://imbianchinosano.it/chi-sono/">Chi sono</a>
+        <a href="https://imbianchinosano.it/servizi/">Servizi</a>
+        <a href="https://imbianchinosano.it/il-mio-prodotto/">Il mio prodotto</a>
+        <a href="https://imbianchinosano.it/sistema-di-ventilazione/">Ventilazione meccanica</a>
+        <a href="https://imbianchinosano.it/info-utili/">Info utili</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO SECTION -->
+  <section class="hero" id="top">
+    <div class="hero-deco-splatter" aria-hidden="true"></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="hero-badges">
+          <span class="loc"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Mira (VE)</span>
+        </div>
+        <h1>La <em>salute</em> prima di tutto</h1>
+        <p>Chiamare l’Imbianchino Sano, significa eliminare e risolvere veramente i tuoi problemi, con un singolo intervento.</p>
+        <div class="cta">
+          <a class="btn" href="tel:+393209781570"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Chiama</a>
+          <a class="btn ghost" href="https://imbianchinosano.it/servizi/">Scopri i servizi</a>
+        </div>
+        <p class="tel-line">
+          <svg class="ico" style="color:var(--green-deep)" aria-hidden="true"><use href="#i-phone"/></svg>
+          Tel. <a href="tel:+393209781570">+39 320 978 1570</a>
+        </p>
+      </div>
+      <figure class="hero-art">
+        <img src="assets/imbianchino-sano-home-1-1600x900.jpg"
+             width="1600" height="900" fetchpriority="high"
+             alt="Imbianchino in tuta bianca che stende campioni di pittura verde su una parete bianca">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SEZIONE INTERATTIVA DEL FURGONCINO (Stile Scott The Painter)
+       ======================================================================== -->
+  <section class="van-stage" id="vanStage" aria-label="Il furgoncino di Imbianchino Sano in viaggio">
+    <div class="wrap">
+      <div class="van-stage-header">
+        <div class="van-route-pill">
+          <span class="van-route-dot" aria-hidden="true"></span>
+          Mira (VE)
+        </div>
+        <div class="van-controls">
+          <button type="button" class="van-ctrl-btn" id="btnHorn">
+            🔊 Suona il clacson
+          </button>
+          <button type="button" class="van-ctrl-btn" id="btnLights">
+            💡 Accendi i fari
+          </button>
+          <button type="button" class="van-ctrl-btn" id="btnDriveToggle">
+            ⏸ Ferma / Fai viaggiare
+          </button>
+        </div>
+      </div>
+
+      <div class="road-viewport">
+        <!-- Sfondo colline morbide e alberi stilizzati -->
+        <svg class="road-scenery" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 240 Q 220 150 480 210 T 980 185 T 1200 215 L 1200 260 L 0 260 Z" fill="#CFEBD9" opacity="0.65"/>
+          <path d="M0 245 Q 340 190 680 225 T 1200 205 L 1200 260 L 0 260 Z" fill="#B5E2C5" opacity="0.55"/>
+        </svg>
+
+        <!-- Strada -->
+        <div class="road-line" aria-hidden="true"></div>
+        <div class="road-dashes" aria-hidden="true"></div>
+
+        <!-- Il Furgoncino SVG -->
+        <div class="van-actor" id="vanActor" role="button" tabindex="0" aria-label="Furgoncino di Imbianchino Sano: clicca per suonare il clacson">
+          <div class="horn-bubble" id="hornBubble">BEEP BEEP!</div>
+          <svg viewBox="0 0 820 360" width="100%" height="100%" aria-hidden="true">
+            <use href="#van-imbianchino-sano"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI È L'IMBIANCHINO SANO -->
+  <section class="sec dark about" id="chi-sono">
+    <svg class="wave top" aria-hidden="true"><use href="#wave-top"/></svg>
+    <div class="wrap split">
+      <div>
+        <h2>Chi è <span>l’Imbianchino Sano?</span></h2>
+        <p class="lead">Mi chiamo Imri Gasi, ho 39 anni.</p>
+        <p>Imbianchino sano ha sede a Mira (VE), in via Antonio Gramsci, 41.</p>
+        <p>Potrei stare qui a raccontarti la classica storiella aziendale, spiegandoti da quante generazioni sto in piedi e tutto il resto del copione che sicuramente avrai già sentito recitare su qualche altro sito web. Credo proprio che tu ne abbia avuto abbastanza. Ecco perché voglio spiegarti solo dei concetti di vero valore…</p>
+      </div>
+      <div class="photo-card">
+        <img src="assets/imri-gasi-imbianchino-sano-mira-1200x960.jpg"
+             width="1200" height="960" loading="lazy"
+             alt="Imri Gasi, l’Imbianchino Sano, sorridente durante un lavoro, con la maglietta del marchio">
+        <div class="over">
+          <h3 class="up">Imri Gasi</h3>
+          <p>Mira (VE)</p>
+          <a class="btn pop" href="https://imbianchinosano.it/chi-sono/">Continua a leggere</a>
+        </div>
+      </div>
+    </div>
+    <svg class="wave bot" aria-hidden="true"><use href="#wave-bot"/></svg>
+  </section>
+
+  <!-- QUELLO CHE NON USO -->
+  <section class="sec nouse" id="servizi">
+    <div class="wrap">
+      <h2>Quello che <span class="paint-mark">non uso</span></h2>
+      <div class="nouse-grid">
+        <div class="nouse-item">
+          <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-bucket"/></svg><span class="slash" aria-hidden="true"></span></span>
+          <h3>Prodotti commerciali di nessun negozio.</h3>
+        </div>
+        <div class="nouse-photo">
+          <img src="assets/proddotti-tossici-1-1200x960.jpg"
+               width="1200" height="960" loading="lazy"
+               alt="Barattoli e latte di vernice commerciale accatastati">
+        </div>
+        <div class="nouse-item">
+          <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-roller"/></svg><span class="slash" aria-hidden="true"></span></span>
+          <h3>Rulli, pennelli o mascherine.</h3>
+        </div>
+      </div>
+      <a class="btn" href="https://imbianchinosano.it/info-utili/">Scopri il perché</a>
+    </div>
+  </section>
+
+  <!-- IL MIO PRODOTTO -->
+  <section class="sec prod" id="prodotto">
+    <div class="wrap split flip">
+      <div class="prod-art">
+        <img src="assets/prodotto-imbianchino-sano-naturale-1200x960.jpg"
+             width="1200" height="960" loading="lazy"
+             alt="Secchio di Elisir 3 in 1 pittura di Imbianchino Sano in un cantiere">
+      </div>
+      <div>
+        <h2>Ti presento il mio prodotto</h2>
+        <p class="sub">Grazie ai principi attivi naturali</p>
+        <ul class="claims">
+          <li>
+            <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg></span>
+            <div>
+              <h3>elimina totalmente la muffa</h3>
+              <span class="chip chip-verify">[da verificare con Imri]</span>
+            </div>
+          </li>
+          <li>
+            <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-home"/></svg></span>
+            <div>
+              <h3>Isola termicamente le pareti di casa</h3>
+              <span class="chip chip-verify">[da verificare con Imri]</span>
+            </div>
+          </li>
+          <li>
+            <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-wind"/></svg></span>
+            <div>
+              <h3>Uccide le particelle di gas V.O.C. presenti nell’aria</h3>
+              <span class="chip chip-verify">[da verificare con Imri]</span>
+            </div>
+          </li>
+        </ul>
+        <a class="btn" href="https://imbianchinosano.it/il-mio-prodotto/">Scopri il prodotto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BANDA VERDE: QUELLO CHE GLI IMBIANCHINI NON DICONO -->
+  <section class="sec band">
+    <svg class="wave top" aria-hidden="true"><use href="#wave-top"/></svg>
+    <div class="band-deco" aria-hidden="true"><i></i><i></i></div>
+    <div class="wrap split">
+      <div>
+        <h2>Quello che gli imbianchini non dicono</h2>
+        <p>Come dici? Credi che io voglia parlare male degli altri per poi dirti che sono il migliore? Tranquillo/a, ti capisco benissimo e voglio che tu sappia che ti ho già perdonato! Si perché, purtroppo ti stai sbagliando! Ma bando alle ciance e veniamo al dunque. In tutta sincerità, rispondimi a questa domanda:</p>
+      </div>
+      <div>
+        <div class="voc">
+          <q>Prima di pitturare casa, qualche imbianchino ti ha mai parlato del GAS V.O.C.?</q>
+          <span class="chip chip-verify">[da verificare con Imri]</span>
+        </div>
+        <a class="btn light" href="https://imbianchinosano.it/info-utili/">Scopri il perché</a>
+      </div>
+    </div>
+    <svg class="wave bot" aria-hidden="true"><use href="#wave-bot"/></svg>
+  </section>
+
+  <!-- VENTILAZIONE MECCANICA -->
+  <section class="sec vent">
+    <div class="wrap split">
+      <div>
+        <h2>Aria fresca e pulita in casa: <span>Scopri la nostra soluzione integrata</span></h2>
+        <p>Oltre alla vernice, è fondamentale garantire un’adeguata ventilazione meccanica per un ambiente salubre e confortevole. Scopri come la combinazione di una pittura di qualità e un sistema di ventilazione avanzato può trasformare la tua casa in uno spazio dove l’aria fresca e i colori brillanti si incontrano.</p>
+        <span class="chip chip-verify">[da verificare con Imri]</span><br>
+        <a class="btn" href="https://imbianchinosano.it/sistema-di-ventilazione/">Esplora la ventilazione meccanica</a>
+      </div>
+      <div class="vent-art">
+        <img src="assets/proteggi-la-tua-famiglia-1600x1068.jpg"
+             width="1600" height="1068" loading="lazy"
+             alt="Famiglia seduta sul tappeto di un salotto luminoso, i genitori fanno un tetto con le braccia">
+      </div>
+    </div>
+  </section>
+
+  <!-- DICONO DI NOI -->
+  <section class="sec rev">
+    <div class="wrap">
+      <div class="rev-head">
+        <h2>Dicono di noi</h2>
+      </div>
+      <div class="rev-list" role="region" aria-label="Dicono di noi" tabindex="0">
+        <figure class="rev-card big">
+          <div class="rev-quote-mark"><span>“</span></div>
+          <blockquote>
+            <p>L’esperienza che ho avuto è stata estremamente positiva. Ho imparato a conoscere la differenza tra le pitture commerciali da quelle sane.</p>
+            <p>Sicuramente credo di aver fatto una scelta positiva da un punto di vista della integrità per la salute della mia famiglia.</p>
+            <p>Lo consiglio vivamente.</p>
+          </blockquote>
+          <cite>Dino Scattolin</cite>
+        </figure>
+        <figure class="rev-card">
+          <div class="rev-quote-mark"><span>“</span></div>
+          <blockquote>
+            <p>Nel suo lavoro è serio, scrupoloso e preciso, infatti abbiamo visto l’ottimo risultato a casa nostra, usa tutti prodotti naturali e si sente già la differenza rispetto a prima.</p>
+          </blockquote>
+          <cite>Fabio Carraro</cite>
+        </figure>
+        <figure class="rev-card">
+          <div class="rev-quote-mark"><span>“</span></div>
+          <blockquote>
+            <p>Positivi: professionalità, puntualità, qualità, reattività.</p>
+            <p>Ottimo servizio svolto da persone competenti, serie e molto disponibili</p>
+            <p>Servizio: Pittura di interni</p>
+          </blockquote>
+          <cite>Andrea Ghedin</cite>
+        </figure>
+        <figure class="rev-card">
+          <div class="rev-quote-mark"><span>“</span></div>
+          <blockquote>
+            <p>Ho particolarmente apprezzato la puntualità, la serietà e la cura nei dettagli dimostrata, dal preventivo sino al termine del lavoro. Sono stato molto soddisfatto dei suggerimenti e dei consigli che mi ha dato e, soprattutto, di come ha approntato il cantiere e di come sono stati svolti tutti i lavori.</p>
+          </blockquote>
+          <cite>Stefano Farella</cite>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CANALE YOUTUBE E LIBRO -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="more">
+        <div class="photo-card">
+          <img src="assets/imbianchino-sano-prodotti-naturali-1200x960.jpg"
+               width="1200" height="960" loading="lazy"
+               alt="Imbianchino con la maglietta Imbianchino Sano al lavoro su un soffitto, con le pareti protette da teli">
+          <div class="over">
+            <h3 class="up">Consigli e indicazioni per un ambiente domestico sano</h3>
+            <a class="btn pop" href="https://www.youtube.com/@imbianchinosanogasi3308/featured">Scopri di più sul mio canale</a>
+          </div>
+        </div>
+        <div class="book">
+          <img src="assets/libro-imbianichino-sano-800x640.png"
+               width="800" height="640" loading="lazy"
+               alt="Copertina del libro Pandemia dell’anima di Imri Gasi">
+          <h3>Ti presento il mio libro</h3>
+          <p>Se ti chiedessi di esprimere un desiderio. Garantendoti con estrema certezza che questo tuo desiderio, venga esaudito immediatamente. Quale sarebbe il tuo desiderio? Nella mia vita ne ho avuti molti, ma nessuno di essi, una volta esauditi mi ha mai reso pienamente felice. Fino a quando un giorno ho messo da parte quei desideri illusori…</p>
+          <a class="btn ghost" href="https://imbianchinosano.it/il-mio-libro">Leggi di più</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="sec contact" id="contatti">
+    <svg class="wave top" aria-hidden="true"><use href="#wave-top"/></svg>
+    <div class="wrap split">
+      <div>
+        <h2>Hai dei dubbi?</h2>
+        <p class="lead">Non esitare a contattarmi.</p>
+        <p>Parlami delle tue necessità, ti aiuterò nel modo più mirato.</p>
+        <a class="btn pop" href="tel:+393209781570"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Chiama</a>
+      </div>
+      <ul class="ways">
+        <li>
+          <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg></span>
+          <span>Tel.<br><a class="big" href="tel:+393209781570">+39 320 978 1570</a></span>
+        </li>
+        <li>
+          <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg></span>
+          <span>E-mail:<br><a href="mailto:info@imbianchinosano.it">info@imbianchinosano.it</a></span>
+        </li>
+        <li>
+          <span class="blob-ico"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg></span>
+          <span>Via A. Gramsci, 41<br>30034 - Mira (VE)</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <img src="assets/logo-imbianchinosano-white.svg" width="251" height="63" loading="lazy" alt="Imbianchino Sano">
+      <p>elimina e risolvi veramente i tuoi problemi, con un singolo intervento.</p>
+    </div>
+    <nav aria-label="Secondaria">
+      <a href="https://imbianchinosano.it/chi-sono/">Chi sono</a>
+      <a href="https://imbianchinosano.it/il-mio-prodotto/">Il mio prodotto</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+    <address>
+      Via A. Gramsci, 41<br>30034 - Mira (VE)<br>
+      Tel. <a href="tel:+393209781570">+39 320 978 1570</a><br>
+      E-mail: <a href="mailto:info@imbianchinosano.it">info@imbianchinosano.it</a><br>
+      GSAMRI82C02Z118I<br>P.I. 04643680277
+    </address>
+  </div>
+</footer>
+
+<div class="bar"><a class="btn" href="tel:+393209781570"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Chiama</a></div>
+
+<script>
+(function(){
+  // 1. Auto-chiusura menu mobile quando si clicca su un link (fix punto aperto in HANDOVER.md)
+  var mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenu) {
+    var links = mobileMenu.querySelectorAll('a');
+    links.forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileMenu.removeAttribute('open');
+      });
+    });
+  }
+
+  // 2. Toggle visibilità chip [da verificare con Imri] per presentare il sito pulito al cliente
+  var toggleVerifyBtn = document.getElementById('toggleVerifyBtn');
+  if (toggleVerifyBtn) {
+    toggleVerifyBtn.addEventListener('click', function() {
+      var hidden = document.body.classList.toggle('hide-verify');
+      toggleVerifyBtn.setAttribute('aria-pressed', String(!hidden));
+      toggleVerifyBtn.innerHTML = 'Chip [da verificare con Imri]: <strong>' + (hidden ? 'NASCOSTI' : 'VISIBILI') + '</strong>';
+    });
+  }
+
+  // 3. Interazioni del Furgoncino (Clacson, Fari, Marcia/Pausa)
+  var vanStage = document.getElementById('vanStage');
+  var vanActor = document.getElementById('vanActor');
+  var hornBubble = document.getElementById('hornBubble');
+  var btnHorn = document.getElementById('btnHorn');
+  var btnLights = document.getElementById('btnLights');
+  var btnDriveToggle = document.getElementById('btnDriveToggle');
+  var hornTimer = null;
+
+  function triggerHorn() {
+    if (!hornBubble) return;
+    hornBubble.classList.add('active');
+    clearTimeout(hornTimer);
+    hornTimer = setTimeout(function() {
+      hornBubble.classList.remove('active');
+    }, 2200);
+  }
+
+  if (btnHorn) btnHorn.addEventListener('click', triggerHorn);
+  if (vanActor) {
+    vanActor.addEventListener('click', triggerHorn);
+    vanActor.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        triggerHorn();
+      }
+    });
+  }
+
+  if (btnLights && vanStage) {
+    btnLights.addEventListener('click', function() {
+      var on = vanStage.classList.toggle('lights-on');
+      btnLights.textContent = on ? '💡 Spegni i fari' : '💡 Accendi i fari';
+    });
+  }
+
+  if (btnDriveToggle && vanStage) {
+    btnDriveToggle.addEventListener('click', function() {
+      var paused = vanStage.classList.toggle('paused');
+      btnDriveToggle.textContent = paused ? '▶️ Fai viaggiare' : '⏸ Ferma il furgoncino';
+    });
+  }
+
+})();
+</script>
+</body>
+</html>
